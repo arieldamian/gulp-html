@@ -188,8 +188,57 @@
             }
         }
     </style>
+    <!--[if (gte mso 9)|(IE)]>
 
+    <style type="text/css">
 
+        table {border-collapse: collapse; font-family: Helvetica, Arial  !important;}
+
+        a, td, h1, h2, h3, h4, h5, div {font-family: Helvetica, Arial  !important; }
+
+        .mail__title {
+            font-family: 'Proxima nova', Helvetica, Arial, sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            color: #333;
+            display: inline-block;
+            overflow: hidden;
+            text-decoration: none;
+            line-height: 1.2;
+        }
+        .main-card-shadow {
+            width: 78.2% !important;
+            box-shadow: none;
+            border: none;
+            margin: 40px auto 0 !important;
+            text-align: center;
+        }
+        .mail__text-card {
+            text-decoration: none;
+            font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            color: #333333;
+            line-height: 1.2;
+            max-width: 367px;
+            width: 100%;
+            margin: 40px auto 32px !important;
+        }
+        .image__data {
+            width: 48px !important;
+            margin: 0px !important;
+            display: block !important;
+        }
+        .data__container{
+            margin: 28px 0 !important
+        }
+        .mail__text-card{
+            margin: 26px auto 0 !important;
+        }
+
+    </style>
+
+    <![endif]-->
 </head>
 <body>
 <!-- PREHEADER -->
@@ -273,18 +322,16 @@
                             </p>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="data__container">
                         <td align="center">
-                            <img width="48" style="width: 48px; ; margin: 0px 0px 14px; auto; display: block;"
+                            <img class="image__data" width="48" style="width: 48px; ; margin: 0px 0px 14px; auto; display: block;"
                                  src="http://shipping-frontend.mercadolibre.com.ar/images/circulo-azul-marker-blanco_2x.png"
                                  alt="Datos de ubicacion">
                             <p class="mail__text-card"
                                style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 100;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.2; max-width: 367px; width: 100%;">
-                                <span class="bold">Día y hora</span>: hoy a las 20:11 horas<br>
-                                <span class="bold">Ubicación</span>: cerca de Buenos Aires, Argentina<br>
-                                <span class="bold">Dispositivo</span>: computadora con Mac OS X<br>
-                                <span class="bold">Navegador</span>: Chrome<br>
-                                <span class="bold">IP</span>: 200.42.23.4<br>
+                                Hoy a las 20:11 horas, cerca de Buenos Aires, Argentina<br>
+                                Dispositivo: computadora con Mac OS X<br>
+                                Navegador: Chrome<br>
                             </p>
                         </td>
                     </tr>
@@ -333,24 +380,12 @@
             </div>
             <!-- FOOTER -->
             <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0"
-                   style="text-align:center; background-color: #f8f8f8; padding-top: 10px;">
+                   style="text-align:center; background-color: #f8f8f8 !important; padding-top: 10px;">
                 <tbody class="mail__img-footer">
-                <tr>
-                    <td colspan="3" align="center" height="25" style="background-color: #f8f8f8;"></td>
+                <tr style="background-color:#f8f8f8 !important;">
+                    <td colspan="3" align="center" height="25"></td>
                 </tr>
-                <!--
-                <tr>
-                    <td colspan="3" align="center" style="font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 13px;font-weight: 300;line-height: 1.08;text-align: center;color: #999999;width: 100%;">No responder este e-mail.</td>
-                </tr>
-
-                <tr>
-                    <td colspan="3" align="center" height="50">
-                    </td>
-                </tr>
-            -->
-
-
-                <tr>
+                <tr style="background-color:#f8f8f8;">
                     <td align="center" style="text-align: center;width: 100%;" colspan="3">
                         <img src="http://shipping-frontend.mercadolibre.com.ar/images/apple-log_2x.png" width="27"
                              height="28" style="display: inline-block; width: auto;">
@@ -358,21 +393,18 @@
                              height="28" style="display: inline-block; width: auto; margin-left: 5px;">
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="3" align="center" height="18" style="background-color: #f8f8f8;">
+                <tr style="background-color: #f8f8f8;">
+                    <td colspan="3" align="center" height="18">
                     </td>
                 </tr>
-
-                <tr>
+                <tr style="background-color:#f8f8f8;">
                     <td colspan="3" align="center"
                         style="font-family: \'Proxima Nova\', Arial, Helvetica, sans-serif;font-size: 13px;font-weight: 300;line-height: 1.08;text-align: center;color: #999999;">
                         ¡Compra y vende desde tu celular!
                     </td>
                 </tr>
-
-
-                <tr>
-                    <td colspan="3" align="center" height="20" style="background-color: #f8f8f8">
+                <tr style="background-color:#f8f8f8;">
+                    <td colspan="3" align="center" height="20">
                     </td>
                 </tr>
                 <!-- FOOTER -->
