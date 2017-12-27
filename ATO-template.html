@@ -48,8 +48,10 @@
             mso-table-rspace: 0pt !important;
         }
 
+        a, td, h1, h2, h3, h4, h5, div {'Proxima Nova', Helvetica, Arial  !important}
         /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
         table {
+            font-family: 'Proxima Nova', Helvetica, Arial  !important;
             border-spacing: 0 !important;
             border-collapse: collapse !important;
             margin: 0 auto;
@@ -194,9 +196,9 @@
 
     <style type="text/css">
 
-        table {border-collapse: collapse; font-family: Helvetica, Arial  !important;}
+        table {border-collapse: collapse; font-family: 'Proxima nova', Helvetica, Arial, sans-serif !important;}
 
-        a, td, h1, h2, h3, h4, h5, div {font-family: Helvetica, Arial  !important; }
+        a, td, h1, h2, h3, h4, h5, div {font-family: 'Proxima nova', Helvetica, Arial, sans-serif !important; }
 
         .mail__title {
             font-family: 'Proxima nova', Helvetica, Arial, sans-serif;
@@ -326,7 +328,7 @@
                     </tr>
                     <tr class="data__container">
                         <td align="center">
-                            <img class="image__data" width="48" style="width: 48px; ; margin: 0px 0px 14px; auto; display: block;"
+                            <img class="image__data" width="48" style="width: 48px; ; margin: 0px 0px 14px; display: block;"
                                  src="http://shipping-frontend.mercadolibre.com.ar/images/circulo-azul-marker-blanco_2x.png"
                                  alt="Datos de ubicacion">
                             <p class="mail__text-card"
@@ -354,7 +356,7 @@
                                     <td align="center"
                                         style="font-family: 'Proxima Nova', Helvetica, Arial ,sans-serif;font-size: 16px;font-weight:400;padding:8px 10px 11px;color:#FFFFFF;">
                                         <a class="mail__button" href="" target="_blank" rel="noopener noreferrer"
-                                           style="text-decoration:none; text-decoration-line: none; color:#ffffff">Si,
+                                           style="text-decoration:none; text-decoration-line: none; color:#ffffff; padding: 8px 4px 11px;">Si,
                                             ingresé a mi cuenta</a>
                                     </td>
                                 </tr>
@@ -365,7 +367,7 @@
                                 <tr>
                                     <td align="center"
                                         style="font-family: 'Proxima Nova', Helvetica, Arial ,sans-serif;font-size: 1em;font-weight:400;padding:20px 10px 11px;color:#FFFFFF;">
-                                        <a class="mail__button" href="" target="_blank" rel="noopener noreferrer"
+                                        <a class="mail__button" href="#" target="_blank"
                                            style="text-decoration:none; text-decoration-line: none; color:#3483fa">No,
                                             no fui yo</a>
                                     </td>
