@@ -184,16 +184,17 @@
                 width: 78.2% !important;
             }
 
-            #card-title {
-                padding: 0 16% !important;
-            }
-
-            .checkmarks-text {
-                max-width: 86% !important;
-            }
-
             .mail__title {
                 display: inline-block;
+            }
+
+            .mail__text-card {
+                line-height: 1.17 !important;
+                margin: 0 32px 27px !important;
+            }
+
+            .mail__buttons-container {
+                max-width: 70% !important;
             }
         }
     </style>
@@ -228,7 +229,7 @@
             font-size: 18px;
             text-align: center;
             color: #333333;
-            line-height: 1.2;
+            line-height: 1.17;
             max-width: 367px;
             width: 100%;
             margin: 40px auto 32px !important;
@@ -240,9 +241,6 @@
         }
         .data__container{
             margin: 28px 0 !important
-        }
-        .mail__text-card{
-            margin: 26px auto 0 !important;
         }
 
     </style>
@@ -297,7 +295,7 @@
                     <td height="0" class="mail__header-bottom-space"></td>
                 </tr>
                 <tr>
-                    <td class="title bold" style="padding:43px 33px;text-align:center;" align="center">
+                    <td class="title bold" style="padding:43px 33px 65px;text-align:center;" align="center">
                                         <span class="mail__title"
                                               style="font-family: 'Proxima nova', Helvetica, Arial, sans-serif; font-size: 26px; font-weight:400;color: #333;overflow:hidden; text-decoration:none; line-height:1.2;">
                                             ¿Te conectaste desde un dispositivo diferente?
@@ -321,19 +319,19 @@
             <div id="div-table-wrapper" class="div-table-wrapper" style="text-align:center;margin: 0 auto;">
                 <table class="main-card-shadow" bgcolor="#ffffff" align="center" border="0" cellpadding="0"
                        cellspacing="0"
-                       style="box-shadow: none; border: none; padding: 42px 30px 0; text-align:center;">
+                       style="box-shadow: none; border: none; padding: 48px 30px 0; text-align:center;">
                     <tbody>
                     <tr>
                         <td align="center">
                             <p class="mail__text-card bold"
-                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 18px;text-align: center;color: #333333;line-height: 1.2; max-width: 367px; width: 100%; margin: 0 auto 42px;">
+                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 18px;text-align: center;color: #333333;line-height: 1.2; max-width: 367px; width: 100%; margin: 0 auto 48px;">
                                 Hubo un ingreso a tu cuenta de Mercado Libre desde un dispositivo que no conocíamos.
                             </p>
                         </td>
                     </tr>
                     <tr class="data__container">
                         <td align="center">
-                            <img class="image__data" width="48" style="width: 48px; ; margin: 0 0 20px; display: block;"
+                            <img class="image__data" width="48" style="width: 48px; ; margin: 0 0 24px; display: block;"
                                  src="http://shipping-frontend.mercadolibre.com.ar/images/circulo-azul-marker-blanco_2x.png"
                                  alt="Datos de ubicacion">
                             <p class="mail__text-card"
@@ -347,14 +345,22 @@
                     <tr>
                         <td align="center">
                             <p class="mail__text-card bold"
-                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 18px;text-align: center;color: #333333;line-height: 1.2; max-width: 367px; width: 100%; margin: 25px 0 0;">
+                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 18px;text-align: center;color: #333333;line-height: 1.2; max-width: 367px; width: 100%; margin: 36px 0 0;">
                                 ¿Fuiste vos?
                             </p>
                         </td>
                     </tr>
-                    <tr class="mail__button-container">
-                        <td align="center" style="padding-top: 27px;">
-                            <table align="center" width="200" border="0" cellpadding="0" cellspacing="0"
+                    <tr class="data__container">
+                        <td align="center">
+                            <p class="mail__text-card"
+                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%; padding-top: 12px">
+                                Si fuiste vos podés continuar navegando como siempre.  Si no, tendrás que cambiar tu clave.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding-top: 30px;">
+                            <table class="mail__buttons-container" align="center" width="200" border="0" cellpadding="0" cellspacing="0"
                                    style="border-radius: 4px; height: 48px; width: 100%; table-layout: fixed;">
                                 <tbody>
                                 <tr>
