@@ -190,11 +190,14 @@
 
             .mail__text-card {
                 line-height: 1.17 !important;
-                margin: 0 32px 27px !important;
             }
 
             .mail__buttons-container {
                 max-width: 70% !important;
+            }
+
+            .disclaimer {
+                padding-top: 16px !important;
             }
         }
     </style>
@@ -324,7 +327,7 @@
                     <tr>
                         <td align="center">
                             <p class="mail__text-card bold"
-                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 18px;text-align: center;color: #333333;line-height: 1.2; max-width: 367px; width: 100%; margin: 0 auto 48px;">
+                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-size: 18px;text-align: center;color: #333333;line-height: 1.2; max-width: 370px; width: 100%; margin: 0 auto 48px;">
                                 Hubo un ingreso a tu cuenta de Mercado Libre desde un dispositivo que no conocíamos.
                             </p>
                         </td>
@@ -352,7 +355,7 @@
                     </tr>
                     <tr class="data__container">
                         <td align="center">
-                            <p class="mail__text-card"
+                            <p class="mail__text-card disclaimer"
                                style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%; padding-top: 12px">
                                 Si fuiste vos podés continuar navegando como siempre.  Si no, tendrás que cambiar tu clave.
                             </p>
@@ -385,25 +388,35 @@
             </div>
             <!-- FOOTER -->
             <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0"
-                   style="text-align:center; background-color: #f8f8f8 !important; padding-top: 10px;">
+                   style="text-align:center; background-color: #f8f8f8 !important;">
                 <tbody class="mail__img-footer">
                 <tr style="background-color:#f8f8f8 !important;">
-                    <td colspan="3" align="center" height="25"></td>
+                    <td colspan="3" align="center" height="48"></td>
+                </tr>
+                <tr style="background-color:#f8f8f8;">
+                    <td colspan="3" align="center"
+                        style="font-family: \'Proxima Nova\', Arial, Helvetica, sans-serif;font-size: 13px;font-weight: 300;line-height: 1.08;text-align: center;color: #999999;">
+                        ¿Necesitas ayuda? <a href="#" style="text-decoration: none; font-weight: normal; color: #3483fa;">Contáctanos</a>
+                    </td>
+                </tr>
+                <tr style="background-color: #f8f8f8;">
+                    <td colspan="3" align="center" height="35">
+                    </td>
                 </tr>
                 <tr style="background-color:#f8f8f8;">
                     <td align="center" style="text-align: center;width: 100%;" colspan="3">
                         <a href="#" style="text-decoration:none; text-decoration-line: none;">
                             <img src="http://shipping-frontend.mercadolibre.com.ar/images/apple-log_2x.png" width="27"
-                                 height="28" style="display: inline-block; width: auto;">
+                                 height="28" alt="iOS" style="display: inline-block; width: auto;">
                         </a>
                         <a href="#" style="text-decoration:none; text-decoration-line: none;">
                             <img src="http://shipping-frontend.mercadolibre.com.ar/images/android-logo_2x.png" width="27"
-                                 height="28" style="display: inline-block; width: auto; margin-left: 5px;">
+                                 height="28" alt="Android" style="display: inline-block; width: auto; margin-left: 5px;">
                         </a>
                     </td>
                 </tr>
                 <tr style="background-color: #f8f8f8;">
-                    <td colspan="3" align="center" height="18">
+                    <td colspan="3" align="center" height="5">
                     </td>
                 </tr>
                 <tr style="background-color:#f8f8f8;">
@@ -413,7 +426,7 @@
                     </td>
                 </tr>
                 <tr style="background-color:#f8f8f8;">
-                    <td colspan="3" align="center" height="20">
+                    <td colspan="3" align="center" height="48">
                     </td>
                 </tr>
                 <!-- FOOTER -->
