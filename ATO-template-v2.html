@@ -199,6 +199,11 @@
             .disclaimer {
                 padding-top: 16px !important;
             }
+
+            /* Force break-line in disclaimer when is desktop */
+            p span {
+                display: block;
+            }
         }
     </style>
     <!--[if (gte mso 9)|(IE)]>
@@ -244,6 +249,15 @@
         }
         .data__container{
             margin: 28px 0 !important
+        }
+        p span {
+            display: block;
+        }
+        .mail__img-footer {
+            padding-top: 48px;
+        }
+        .mail__buttons-container {
+            max-width: 70% !important;
         }
 
     </style>
@@ -357,7 +371,7 @@
                         <td align="center">
                             <p class="mail__text-card disclaimer"
                                style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%; padding-top: 12px">
-                                Si fuiste vos podés continuar navegando como siempre.  Si no, tendrás que cambiar tu clave.
+                                <span>Si fuiste vos podés continuar navegando como siempre.</span> <span> Si no, tendrás que cambiar tu clave.</span>
                             </p>
                         </td>
                     </tr>
