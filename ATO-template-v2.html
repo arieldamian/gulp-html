@@ -285,12 +285,15 @@
             <!-- HEADER -->
             <table width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tbody>
-                <tr>
-                    <td class="logo" style="padding: 11px 15px 8px 15px;background-color: #fbee00;">
+                <tr style="background-color: #fbee00;">
+                    <td class="logo" style="padding: 11px 15px 8px 15px;">
                         <a href="https://mercadolibre.com.ar">
                             <img class="mail__img-header" alt="MercadoLibre" border="0" width="125"
                                  src="https://http2.mlstatic.com/ui/navigation/2.3.5/mercadolibre/logo__large.png">
                         </a>
+                    </td>
+                    <td class="logo" style="padding: 11px 23px 8px 15px; float:right; font-size:12px; font-weight: 300; line-height: 1.0; color:#666">
+                        <p>${NICKNAME}</p>
                     </td>
                 </tr>
                 </tbody>
@@ -348,14 +351,21 @@
                     </tr>
                     <tr class="data__container">
                         <td align="center">
+                            <g:if type="${TYPE == "desktop"}">
                             <img class="image__data" width="48" style="width: 48px; ; margin: 0 0 24px; display: block;"
-                                 src="http://shipping-frontend.mercadolibre.com.ar/images/circulo-azul-marker-blanco_2x.png"
-                                 alt="Datos de ubicacion">
+                                 src="https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/180104124527_icondesktop2x.png"
+                                 alt="Desktop">
+                            </g:if>
+                            <g:else>
+                                <img class="image__data" width="48" style="width: 48px; ; margin: 0 0 24px; display: block;"
+                                     src="https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/180104124558_iconmobile2x.png"
+                                     alt="Mobile">
+                            </g:else>
                             <p class="mail__text-card"
                                style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%;">
-                                Hoy a las 20:11 horas, cerca de Buenos Aires, Argentina<br>
-                                Dispositivo: computadora con Mac OS X<br>
-                                Navegador: Chrome<br>
+                                ${DATETIME}&nbsp;horas, ${LOCATION}<br>
+                                Dispositivo: ${DEVICE}<br>
+                                Navegador: ${BROWSER}<br>
                             </p>
                         </td>
                     </tr>
@@ -367,14 +377,6 @@
                             </p>
                         </td>
                     </tr>
-                    <tr class="data__container">
-                        <td align="center">
-                            <p class="mail__text-card disclaimer"
-                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%; padding-top: 12px">
-                                <span>Si fuiste vos podés continuar navegando como siempre.</span> <span> Si no, tendrás que cambiar tu clave.</span>
-                            </p>
-                        </td>
-                    </tr>
                     <tr>
                         <td align="center" style="padding-top: 30px;">
                             <table class="mail__buttons-container" align="center" width="200" border="0" cellpadding="0" cellspacing="0"
@@ -382,11 +384,11 @@
                                 <tbody>
                                 <tr>
                                     <td style="padding:1px 4px 0 4px;border:solid 1px #3483fa;border-radius:4px; height:30px;" bgcolor="#fff" >
-                                        <a href="https://buyingflow.mercadolivre.com.br/bid/confirm?item_id=${item_id}&quantity=1" style="display:block;padding:0 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">Sí, fui yo</a>
+                                        <a href="https://buyingflow.mercadolivre.com.br/bid/congrats?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="display:block;padding:0 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">Sí, fui yo</a>
                                     </td>
                                     <td width="8" style="font-size:1px; height:30px;">&nbsp;</td>
                                     <td style="padding:1px 4px 0 4px;border:solid 1px #3483fa;border-radius:4px; height:30px;" bgcolor="#fff" >
-                                        <a href="https://buyingflow.mercadolivre.com.br/bid/confirm?item_id=${item_id}&quantity=1" style="display:block;padding:0 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">No, no fui yo</a>
+                                        <a href="https://buyingflow.mercadolivre.com.br/bid/confirm?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="display:block;padding:0 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">No, no fui yo</a>
                                     </td>
                                 </tr>
                                 </tbody>
