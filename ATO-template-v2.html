@@ -91,6 +91,19 @@
             max-width: 79% !important;
         }
 
+        .im {
+            text-decoration:none !important;
+            font-family: 'Proxima Nova', Arial, Helvetica, sans-serif !important;
+            font-weight: 300 !important;
+            font-size: 14px !important;
+            text-align: center !important;
+            color: #333333 !important;
+            margin: 0 auto !important;
+            line-height: 1.29 !important;
+            max-width: 367px !important;
+            width: 100% !important;
+        }
+
         @media only screen and (min-width: 480px) {
             .title {
                 width: 78.2% !important;
@@ -363,8 +376,16 @@
                             </g:else>
                             <p class="mail__text-card"
                                style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%;">
-                                ${DATETIME}&nbsp;horas, ${LOCATION}<br>
-                                Dispositivo: ${DEVICE}<br>
+                                <g:if test="${DATE.TYPE == "hoy"}">
+                                    Hoy ${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                </g:if>
+                                <g:elseif test="${DATE.TYPE == "ayer"}">
+                                    Ayer${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                </g:elseif>
+                                <g:else>
+                                    El ${DATE.DAY}${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                </g:else>
+                                Dispositivo: ${DEVICETYPE == 'desktop' ? 'computadora' : 'celular'}&nbsp;con&nbsp;${OS}<br>
                                 Navegador: ${BROWSER}<br>
                             </p>
                         </td>
@@ -388,7 +409,7 @@
                                     </td>
                                     <td width="8" style="font-size:1px; height:30px;">&nbsp;</td>
                                     <td style="padding:1px 4px 0 4px;border:solid 1px #3483fa;border-radius:4px; height:30px;" bgcolor="#fff" >
-                                        <a href="https://accountrecovery.mercadolibre.com.ar/feedback/recognized-login?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="display:block;padding:0 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">No, no fui yo</a>
+                                        <a href="https://accountrecovery.mercadolibre.com.ar/feedback/unrecognized-login?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="display:block;padding:0 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">No, no fui yo</a>
                                     </td>
                                 </tr>
                                 </tbody>
