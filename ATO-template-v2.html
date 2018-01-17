@@ -376,15 +376,17 @@
                             </g:else>
                             <p class="mail__text-card"
                                style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333 !important;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%;">
-                                <g:if test="${DATE.TYPE == "hoy"}">
-                                    Hoy ${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
-                                </g:if>
-                                <g:elseif test="${DATE.TYPE == "ayer"}">
-                                    Ayer${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
-                                </g:elseif>
-                                <g:else>
-                                    El ${DATE.DAY}${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
-                                </g:else>
+                                <span style="font-weight: normal;">
+                                    <g:if test="${DATE.TYPE == "hoy"}">
+                                        Hoy ${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                    </g:if>
+                                    <g:elseif test="${DATE.TYPE == "ayer"}">
+                                        Ayer${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                    </g:elseif>
+                                    <g:else>
+                                        El ${DATE.DAY}${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                    </g:else>
+                                </span>
                                 Dispositivo: ${DEVICETYPE == 'desktop' ? 'computadora' : 'celular'}&nbsp;con&nbsp;${OS}<br>
                                 Navegador: ${BROWSER}<br>
                             </p>
