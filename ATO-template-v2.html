@@ -376,16 +376,18 @@
                                      alt="Mobile">
                             </g:else>
                             <p class="mail__text-card"
-                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%;">
-                                <g:if test="${DATE.TYPE == "hoy"}">
-                                    Hoy ${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
-                                </g:if>
-                                <g:elseif test="${DATE.TYPE == "ayer"}">
-                                    Ayer${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
-                                </g:elseif>
-                                <g:else>
-                                    El ${DATE.DAY}${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
-                                </g:else>
+                               style="text-decoration:none;font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;font-weight: 300;font-size: 14px;text-align: center;color: #333333 !important;margin: 0 auto;line-height: 1.29; max-width: 367px; width: 100%;">
+                                <span style="font-weight: normal;">
+                                    <g:if test="${DATE.TYPE == "hoy"}">
+                                        Hoy ${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                    </g:if>
+                                    <g:elseif test="${DATE.TYPE == "ayer"}">
+                                        Ayer${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                    </g:elseif>
+                                    <g:else>
+                                        El ${DATE.DAY}${TIME ? " a las&nbsp;${TIME}&nbsp;horas" : ''}${LOCATION ? ", cerca de&nbsp;${LOCATION}" : ''}<br>
+                                    </g:else>
+                                </span>
                                 Dispositivo: ${DEVICETYPE == 'desktop' ? 'computadora' : 'celular'}&nbsp;con&nbsp;${OS}<br>
                                 Navegador: ${BROWSER}<br>
                             </p>
@@ -405,12 +407,12 @@
                                    style="border-radius: 4px; height: 48px; width: 100%; table-layout: fixed;">
                                 <tbody>
                                 <tr>
-                                    <td style="border:solid 1px #3483fa;border-radius:4px; height:100%; width: 100%; display: table;" bgcolor="#fff" >
-                                        <a href="https://accountrecovery.mercadolibre.com.ar/feedback/recognized-login?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="display:table-cell; vertical-align: middle; height: 100%;font-family:'Proxima Nova', Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">Sí, fui yo</a>
+                                    <td style="border:solid 1px #3483fa;border-radius:4px; height:30px; font-family: 'Proxima nova', Helvetica, Arial, sans-serif;" bgcolor="#fff" >
+                                        <a href="https://accountrecovery.mercadolibre.com.ar/feedback/recognized-login?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="padding: 10px 3px; display:block;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">Sí, fui yo</a>
                                     </td>
                                     <td width="8" style="font-size:1px; height:30px;">&nbsp;</td>
-                                    <td style="border:solid 1px #3483fa;border-radius:4px; height:100%; width: 100%; display: table;" bgcolor="#fff" >
-                                        <a href="https://accountrecovery.mercadolibre.com.ar/feedback/unrecognized-login?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="display:table-cell;vertical-align: middle; height: 100%;font-family:'Proxima Nova', Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">No fui yo</a>
+                                    <td style="border:solid 1px #3483fa;border-radius:4px; height:30px; font-family: 'Proxima nova', Helvetica, Arial, sans-serif;" bgcolor="#fff" >
+                                        <a href="https://accountrecovery.mercadolibre.com.ar/feedback/unrecognized-login?deviceProfileId=${DEVICE_PROFILE_ID}&userId=${USER_ID}" style="padding: 10px 3px; display:block;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#3483fa;text-decoration:none;text-align: center">No fui yo</a>
                                     </td>
                                 </tr>
                                 </tbody>
