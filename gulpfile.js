@@ -7,7 +7,7 @@ var runSequence = require('run-sequence');
 var dir = {
   dist: 'dist',
   dist_html: 'dist/**',
-  src_html: 'src/**'
+  src_html: 'src/email-template/**'
 };
 
 // Clean output directory
