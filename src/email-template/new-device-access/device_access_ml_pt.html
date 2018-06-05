@@ -7,12 +7,9 @@
 	<!-- Forcing initial-scale shouldn't be necessary -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Use the latest (edge) version of IE rendering engine -->
-	<g:if test="${platform_id == "MP"}">
-	<title>Mercado Pago</title>
-	</g:if>
-	<g:elseif test="${platform_id == "MS"}">
+	<g:if test="${platform_id == 'MS'}">
 	<title>Mercado Shops</title>
-	</g:elseif>
+	</g:if>
 	<g:else>
 		<title>Mercado Livre</title>
 	</g:else>
