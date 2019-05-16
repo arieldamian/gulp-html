@@ -1,41 +1,39 @@
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var replace = require('gulp-replace');
-var del = require('del');
-var runSequence = require('run-sequence');
+const { src, dest, series } = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const replace = require('gulp-replace');
+const del = require('del');
+const runSequence = require('run-sequence');
 
-var dir = {
+const dir = {
   dist: 'dist',
   dist_html: 'dist/**',
   src_html: 'src/email-template/**'
 };
 
 // Clean output directory
-gulp.task('clean', function() {
-  return del.sync(dir.dist);
-});
+const clean = () => {
+  return del([`${dir.dist}/**`, '!' + dir.dist]);
+};
 
-gulp.task('minifyHtml', function() {
-  return gulp.src(dir.src_html)
+const minifyHtml = () => {
+  return src(dir.src_html)
       .pipe(htmlmin({
         collapseWhitespace: true,
         processConditionalComments: true,
         minifyCSS: true,
         ignoreCustomFragments: [ (/\<\g\:[^\%]*?\g\/\>/g) ], // This should do the trick
         removeComments: true}))
-      .pipe(gulp.dest(dir.dist))
-});
+      .pipe(dest(dir.dist))
+};
 
 // Prepares mail to distribution to Mail API.
-gulp.task('prepMail', function() {
-  return gulp.src(dir.dist_html)
+const prepMail = () => {
+  return src(dir.dist_html)
       .pipe(replace('\"', '\\"'))
-      .pipe(gulp.dest(dir.dist));
-});
+      .pipe(dest(dir.dist));
+};
 
-// builders
-gulp.task('build', function (callback) {
-  runSequence(
-      'clean', 'minifyHtml', 'prepMail', callback
-  );
-});
+exports.clean = clean;
+exports.minifyHtml = minifyHtml;
+exports.prepMail = prepMail;
+exports.build = series(clean, minifyHtml, prepMail);
