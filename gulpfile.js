@@ -30,6 +30,7 @@ const minifyHtml = () => {
 const prepMail = () => {
   return src(dir.dist_html)
       .pipe(replace('\"', '\\"'))
+      .pipe(replace(/\n\s*/g, ''))
       .pipe(dest(dir.dist));
 };
 
