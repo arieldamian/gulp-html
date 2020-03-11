@@ -33,4 +33,4 @@ gulp build
 * `gulp clean`: Removes all files in the `dist/` directory.
 * `gulp minifyHtml`: Generates a minified version of any HTML file located in `./src/email-template/`
 * `gulp prepMail`: Appends a backslash (`\`)character before any double quote (`"`) character in all HTML files located in the `dist/` directory
-* `gulp build`: Runs all commands previous commands in order
+* `gulp build`: Runs all previous commands in order
