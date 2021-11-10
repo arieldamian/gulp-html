@@ -1,5 +1,8 @@
 # HTML minimizer for MELI Emails API
 
+![Have no idea](https://repository-images.githubusercontent.com/115420511/83cf8980-a9c5-11eb-82b6-20e35092ec48)
+
+
 ## Prerequisites
 
 * Node (Developed and tested with v10 LTS)
